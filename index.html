@@ -116,6 +116,10 @@
       top: 50%;
       transform: translate(-50%, -50%);
       transition: left 0.2s ease, top 0.2s ease;
+      position: absolute;
+    }
+
+    .btn-no.fleeing {
       position: fixed;
     }
 
@@ -299,6 +303,7 @@
 
     // No button runs to the side of the screen farthest from the cursor
     function moveNoButton(e) {
+      btnNo.classList.add('fleeing');
       const w = btnNo.offsetWidth;
       const h = btnNo.offsetHeight;
       const padding = 24;
